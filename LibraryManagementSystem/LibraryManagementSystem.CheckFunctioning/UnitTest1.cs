@@ -21,9 +21,10 @@ namespace LibraryManagementSystem.CheckFunctioning
         public void Check_For_Issued_Book()
         {
             IssueBook issuedbook = new IssueBook();
-            LibraryIssuedBooks books = new LibraryIssuedBooks();
-            string[] data=books.BookIssued(issuedbook);
-            Assert.AreSame("Vision 2020", data[0]);
+            issuedbook.AddBookDetails();
+
+            string[] data=issuedbook.GetBookDetails().Split(',');
+            Assert.AreEqual("Vision 2020", data[0]);
         }
 }
 }

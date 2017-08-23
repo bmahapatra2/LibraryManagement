@@ -35,7 +35,14 @@ namespace LibraryManagementSystem.BookIssueProcess
 
         public string GetBookDetails()
         {
-            return BookDetails.ToString();
+            string result = string.Empty;
+            foreach(var a in BookDetails)
+            {
+                result += a.ToString();
+            }
+
+            return result;
+           // return BookDetails.ToString();
         }
     }
 }

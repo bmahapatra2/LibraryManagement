@@ -36,7 +36,7 @@ namespace LibraryManagementSystem.Book.Entity
         public override string ToString()
         {
             
-            return _bookname+_author+_genre+_bookid;
+            return _bookname+','+_author+','+_genre+','+_bookid+"\n";
         }
 
 
